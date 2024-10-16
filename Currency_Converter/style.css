@@ -1,0 +1,70 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*currency converter Styling */
+
+body {
+  background-color: black;
+}
+
+.topnav {
+  background-color: #1b1212;
+  overflow: hidden;
+  margin: 0%;
+}
+
+/* Centering the navigation bar content */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+
+/* Styling the logo */
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px; /* Adjust as needed */
+  font-weight: 700; /* Bold */
+  color: #f44a1e; /* Assuming a bright color */
+  text-align: center;
+  margin: auto;
+}
+
+/* Aligning Help and icons */
+.top-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right a {
+  color: #f44a1e; /* Same color as the logo */
+  text-decoration: none;
+  margin-right: 10px; /* Space between text and icons */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Chevron icon styling */
+.top-right .fa-chevron-down {
+  color: #f44a1e; /* Same color as the logo */
+  margin-right: 10px; /* Space between the chevron and language icon */
+}
+
+/* Language icon styling */
+.top-right .fa-globe {
+  color: #f44a1e; /* Same color for consistency */
+  font-size: 18px; /* Adjust size as needed */
+}
+
+/* Remove bullet points if there are any lists */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
