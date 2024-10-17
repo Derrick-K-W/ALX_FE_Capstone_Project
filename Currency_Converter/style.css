@@ -26,7 +26,7 @@ nav {
 }
 
 .insignia {
-margin-bottom: 38px;
+  margin-bottom: 38px;
   width: 25px;
   height: 25px;
   align-items: center;
@@ -42,7 +42,6 @@ margin-bottom: 38px;
   font-weight: lighter; /* Bold */
   color: #f44a1e; /* Assuming a bright color */
   text-align: center;
-
 }
 
 /* Aligning Help and icons */
@@ -57,7 +56,6 @@ margin-bottom: 38px;
   color: #f44a1e;
 }
 .top-right a {
-
   color: #f44a1e;
   text-decoration: none;
   margin-right: 25px; /* Space between text and icons */
@@ -84,11 +82,11 @@ nav ul {
 /* h1 element */
 h1 {
   color: #f44a1e;
-  font-family: 'Sansita One', sans-serif;
-  font-size: 24px; /* Adjust size as needed */
-  font-weight: 300; /* Saira Stencil One is already quite bold */
+  font-family: "Sansita One", sans-serif;
+  font-size: 45px; /* Adjust size as needed */
+  font-weight: 700; /* Saira Stencil One is already quite bold */
   color: #f44a1e; /* Adjust the color as needed */
- margin-top: 80px;
+  margin-top: 100px;
   text-align: center;
 }
 /* Styles for Currency converter section  */
@@ -104,13 +102,13 @@ h1 {
   width: 1000px;
   height: 250px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 #amount-container {
   display: flex;
   flex-direction: column;
-  background-color: #EDEADE;
+  background-color: #edeade;
   padding: 10px;
   border-radius: 8px;
   width: 450px;
@@ -122,13 +120,12 @@ h1 {
 #converted-container {
   display: flex;
   flex-direction: column;
-  background-color: #EDEADE;
+  background-color: #edeade;
   padding: 10px;
   border-radius: 8px;
   width: 450px;
   border: solid 1px black;
 }
-
 
 input {
   border: none;
@@ -150,48 +147,102 @@ input {
   font-size: 20px;
   color: #f44a1e;
 }
- /* Styles for h3 element */
+/* Styles for h3 element */
 
 .globe {
   color: #f44a1e;
-  font-family: 'Roboto Serif', serif;
-  font-size: 2rem;
+  font-family: "Roboto Serif", serif;
+  font-size: 2em;
   font-weight: lighter;
   text-align: center;
+  margin-top: 70px;
+}
+
+/* Container for the comment boxes */
+
+section {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 20px; /* Space between boxes */
   margin-top: 25px;
+  margin-bottom: 20px;
 }
+
 /* Styles for comment section */
-.container-1 {
-  background-color: aqua;
-}
+
 .comment-box-1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: green;
-  width: 350px;
-  height: 150px;
+  background-color: #1b1212; /* Change background color to match the desired look */
+  width: 250px;
+  height: 170px;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better styling */
 }
 
 .comment-box-2 {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: aqua;
-  width: 350px;
-  height: 150px;
-  margin: auto;
-  text-align: left;
+  background-color: #1b1212; /* Change background color to match the desired look */
+  width: 250px;
+  height: 170px;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better styling */
 }
 
 .comment-box-3 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: brown;
-  width: 350px;
-  height: 150px;
+  background-color: #1b1212; /* Change background color to match the desired look */
+  width: 250px;
+  height: 170px;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better styling */
+}
+
+/* Rating container */
+.rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* Aligns text to the left */
+  margin-top: 5px;
+}
+
+/* Rating image styles */
+.rating img {
+  
+  width: 150px;
+}
+
+
+.text-1 {
+  margin-top: 5px;
+  color: #f44a1e;
+  font-family: "Roboto Serif", serif;
+  font-weight: bold;
+  font-size: medium;
+ 
+}
+
+.text-2 {
+  color: #EC5800;
+  font-family: "Roboto Serif", serif;
+  font-weight: 100;
+  font-size: 15px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.text-3 {
+ color: #f44a1e;
+ font-weight: bold;
+ margin-top: 15px;
 }
