@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wize Currency Converter</title>
+    <link rel="stylesheet" href="currency-converter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="topnav">
+        <div class="insignia">
+          <img src="Images/logo4.png" alt="insignia" />
+        </div>
+        <div class="logo">WIZE CURRENCY CONVERTER</div>
+        <div class="top-right">
+          <a href="#">Help</a>
+          <i class="fa-solid fa-chevron-down"></i>
+          <div class="language-container">
+            <i class="fa-solid fa-globe icon globe-icon"></i> <!-- Globe icon -->
+            <ul id="languageDropdown" class="language-dropdown hidden">
+                <li data-lang="en">English</li>
+            </ul>
+        </div>
+        
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>CURRENCY CONVERTER</h1>
+      <section>
+        <div class="container">
+          <!-- Input for amount -->
+          <div id="amount-container">
+            <label for="amount">Amount</label>
+            <div>
+              <input type="number" name="amount" id="amount" />
+              <select id="amountCurrency"></select>
+              <i class="fa-solid fa-chevron-down icon chevron-amount"></i> <!-- Added class to target this icon -->
+            </div>
+          </div>
+      
+          <!-- Arrow for conversion direction -->
+          <div class="arrow-box">
+            <i class="fa-solid fa-right-left icon"></i> <!-- Swap Button -->
+          </div>
+      
+          <!-- Input for converted amount -->
+          <div class="box" id="converted-container">
+            <label for="converted">Converted to</label>
+            <div>
+              <input type="number" name="converted" id="converted" readonly />
+              <select id="convertedCurrency"></select>
+              <i class="fa-solid fa-chevron-down icon chevron-converted"></i> <!-- Added class to target this icon -->
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+      
+      <div class="globe">
+        <p>Wize is trusted by millions around the globe</p>
+      </div>
+      <section>
+        <div class="comment-box-1">
+          <div class="rating">
+            <img src="Images/trustpilot rating 1.png" alt="rating" />
+            <div>
+              <p class="text-1">So fast and efficient</p>
+              <p class="text-2">
+                So fast and efficient App is really easy to use.
+              </p>
+              <p class="text-3">Jacqueline</p>
+            </div>
+          </div>
+        </div>
+        <div class="comment-box-2">
+          <div class="rating">
+            <img src="Images/trustpilot rating 1.png" alt="rating" />
+            <div>
+              <p class="text-1">Excellent app</p>
+              <p class="text-2">Excellent app</p>
+              <p class="text-3">customer</p>
+            </div>
+          </div>
+        </div>
+        <div class="comment-box-3">
+          <div class="rating">
+            <img src="Images/trustpilot rating 1.png" alt="rating" />
+            <div>
+              <p class="text-1">Good service</p>
+              <p class="text-2">Good service</p>
+              <p class="text-3">Jacques</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="rate-container">
+        <div class="rating-box-1">
+          <div>
+            <img class="apple" src="Images/logo 8.jpg" alt="Apple icon" />
+          </div>
+          <div>
+            <p class="app">App Store</p>
+          </div>
+          <div>
+            <img class="rate" src="Images/rate.png" alt="Ratings" />
+          </div>
+          <div>
+            <p class="rate-number">4.9/5, 58.6k ratings</p>
+          </div>
+        </div>
+        <div class="rating-box-2">
+          <div>
+            <img
+              class="icon"
+              src="Images/google play icon.png"
+              alt="Google play icon"
+            />
+          </div>
+          <div>
+            <p class="app">Google Play</p>
+          </div>
+          <div>
+            <img class="rate" src="Images/rate.png" alt="Ratings" />
+          </div>
+          <div>
+            <p class="rate-number">4.9/5, 118.6k ratings</p>
+          </div>
+        </div>
+        <div class="rating-box-3">
+          <div>
+            <img
+              class="pilot"
+              src="Images/trustpilot icon.png"
+              alt="Trustpilot icon"
+            />
+          </div>
+          <div>
+            <p class="app-pilot">Trustpilot</p>
+          </div>
+          <div>
+            <img
+              class="trustpilot"
+              src="Images/trustpilot rating 2.png"
+              alt="Ratings"
+            />
+          </div>
+          <div>
+            <p class="rate-number">4.9/5, 47.6k ratings</p>
+          </div>
+        </div>
+      </section>
+      <section id="download">
+        <div class="smartphone">
+          <img src="Images/smartphone.png" alt="Smartphone" />
+        </div>
+        <div>
+          <p class="title">Download Our Currency Converter App</p>
+          <p class="below-title">What our users love:</p>
+          <ul>
+            <li>100% free, with no ads to distract you.</li>
+            <li>Real-time exchange rates at your fingertips.</li>
+            <li>
+              Track rate changes over the past 24 hours or up to 500 days.
+            </li>
+            <li>
+              Track rate changes over the past 24 hours or up to 500 days.
+            </li>
+            <li>
+              Track rate changes over the past 24 hours or up to 500 days.
+            </li>
+            <li>
+              Add your favorite currencies for quick access—whether it's pounds,
+              dollars, or pesos, we’ve got you covered!
+            </li>
+          </ul>
+          <section id="store-container">
+            <div class="store-1">
+              <img src="Images/apple store.png" alt="Apple store" />
+            </div>
+            <div class="store-2">
+              <img src="Images/google playstore.png" alt="google playstore" />
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section id="logo-section-2">
+        <div>
+          <img class="bottom-logo" src="Images/b.png" alt="bottom logo" />
+        </div>
+        <div>
+          <p class="wize">WIZE</p>
+        </div>
+      </section>
+      <div class="copyright">
+        <p>&copy; WIZE.com Inc. All rights reserved.</p>
+      </div>
+      <nav class="vector">
+        <p class="f">Follow us</p>
+        <div class="vicon">
+          <a href="#"> <i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"> <i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+      </nav>
+    </footer>
+    <script src="currency-converter.js"></script>
+  </body>
+</html>
