@@ -1,6 +1,6 @@
 // API key from ExchangeRate-API
-const API_KEY = 'f17643aba338e8d802ed27f7';  // Your API key
-const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;  // Corrected API URL with the API_KEY
+const API_KEY = 'f17643aba338e8d802ed27f7'; 
+const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;  
 
 // Currency list with their respective flags (using Unicode emoji)
 const currencyFlags = {
@@ -13,9 +13,9 @@ const amountInput = document.getElementById('amount');
 const convertedInput = document.getElementById('converted');
 const amountCurrency = document.getElementById('amountCurrency');
 const convertedCurrency = document.getElementById('convertedCurrency');
-const swapButton = document.querySelector('.fa-right-left'); // Swap icon
-const chevronAmount = document.querySelector('.chevron-amount'); // Chevron for amount currency
-const chevronConverted = document.querySelector('.chevron-converted'); // Chevron for converted currency
+const swapButton = document.querySelector('.fa-right-left'); 
+const chevronAmount = document.querySelector('.chevron-amount'); 
+const chevronConverted = document.querySelector('.chevron-converted');
 
 // Store exchange rates
 let exchangeRates = {};
@@ -23,30 +23,29 @@ let exchangeRates = {};
 // Fetch exchange rates when the page loads
 async function fetchExchangeRates() {
   try {
-    const response = await fetch(API_URL);  // Use API_URL here
-    if (!response.ok) throw new Error('Failed to fetch exchange rates');
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`);
     
     const data = await response.json();
     exchangeRates = data.conversion_rates;
     
-    // Populate currency dropdowns
+    
     populateCurrencyDropdowns();
   } catch (error) {
     alert(`Error fetching exchange rates: ${error.message}`);
   }
 }
 
-// Populate dropdown lists with currency options and flags
+
 function populateCurrencyDropdowns() {
   const currencies = Object.keys(exchangeRates);
   
   currencies.forEach(currency => {
-    // Create options for "Amount" currency dropdown
+    
     const option1 = document.createElement('option');
     option1.value = currency;
     option1.innerHTML = `${currencyFlags[currency] || ''} ${currency}`;
     
-    // Create options for "Converted" currency dropdown
+   
     const option2 = document.createElement('option');
     option2.value = currency;
     option2.innerHTML = `${currencyFlags[currency] || ''} ${currency}`;
@@ -55,7 +54,7 @@ function populateCurrencyDropdowns() {
     convertedCurrency.appendChild(option2);
   });
   
-  // Set default selections
+  // Default selections
   amountCurrency.value = 'USD';
   convertedCurrency.value = 'EUR';
 }
@@ -67,7 +66,7 @@ function convertCurrency() {
   const toCurrency = convertedCurrency.value;
   
   if (!amountValue || !fromCurrency || !toCurrency || !exchangeRates[fromCurrency] || !exchangeRates[toCurrency]) {
-    return; // Skip calculation if input is invalid
+    return;
   }
   
   const rate = exchangeRates[toCurrency] / exchangeRates[fromCurrency];
@@ -82,28 +81,29 @@ function swapCurrencies() {
   amountCurrency.value = convertedCurrency.value;
   convertedCurrency.value = tempCurrency;
   
-  convertCurrency(); // Recalculate after the swap
+  convertCurrency(); 
 }
 
-// Add event listeners for input and currency selection changes
+// Event listeners for input and currency selection changes
 amountInput.addEventListener('input', convertCurrency);
 amountCurrency.addEventListener('change', convertCurrency);
 convertedCurrency.addEventListener('change', convertCurrency);
 
-// Add event listener to the swap button (left-right arrow icon)
+// Event listener to the swap button (left-right arrow icon)
 swapButton.addEventListener('click', swapCurrencies);
 
-// Make chevron icons functional (trigger dropdown click)
+// Chevron icons functionality (trigger dropdown focus)
 chevronAmount.addEventListener('click', function() {
-  amountCurrency.dispatchEvent(new MouseEvent('mousedown'));  // Trigger dropdown on chevron click
+  amountCurrency.focus(); 
 });
 
 chevronConverted.addEventListener('click', function() {
-  convertedCurrency.dispatchEvent(new MouseEvent('mousedown'));  // Trigger dropdown on chevron click
+  convertedCurrency.focus(); 
 });
 
 // Fetch exchange rates on page load
 fetchExchangeRates();
+
 
 
 // Get the globe icon and dropdown elements
@@ -112,7 +112,7 @@ const languageDropdown = document.getElementById('languageDropdown');
 
 // Toggle the visibility of the dropdown when the globe icon is clicked
 globeIcon.addEventListener('click', function() {
-    languageDropdown.classList.toggle('hidden'); // Toggle the "hidden" class
+    languageDropdown.classList.toggle('hidden');
 });
 
 // Handle language selection
@@ -120,14 +120,34 @@ languageDropdown.addEventListener('click', function(e) {
     if (e.target.tagName === 'li') {
         const selectedLanguage = e.target.getAttribute('data-lang');
         console.log(`Selected language: ${selectedLanguage}`);
-        // Add functionality here to switch the language (if needed)
-        languageDropdown.classList.add('hidden'); // Hide the dropdown after selection
+        
+        languageDropdown.classList.add('hidden');
     }
 });
 
 // Close the dropdown if clicked outside
 window.addEventListener('click', function(e) {
     if (!globeIcon.contains(e.target) && !languageDropdown.contains(e.target)) {
-        languageDropdown.classList.add('hidden'); // Close the dropdown if clicked outside
+        languageDropdown.classList.add('hidden');
     }
 });
+
+
+ // JavaScript to handle the dropdown toggle
+ document.getElementById('helpBtn').addEventListener('click', function() {
+  var dropdown = document.getElementById('helpDropdown');
+  dropdown.classList.toggle('show');
+});
+
+// Close the dropdown if clicked outside
+window.onclick = function(event) {
+  if (!event.target.matches('#helpBtn') && !event.target.matches('.fa-chevron-down')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+  }
+};

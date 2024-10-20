@@ -26,15 +26,20 @@
         </div>
         <div class="logo">WIZE CURRENCY CONVERTER</div>
         <div class="top-right">
-          <a href="#">Help</a>
-          <i class="fa-solid fa-chevron-down"></i>
+          <div class="dropdown">
+            <a href="#" id="helpBtn">Help</a>
+            <div class="dropdown-content" id="helpDropdown">
+              <a href="support.html" id="supportLink">Support</a>
+              <a href="mailto:support@example.com" id="emailLink">Email</a>
+            </div>
+          </div>
           <div class="language-container">
-            <i class="fa-solid fa-globe icon globe-icon"></i> <!-- Globe icon -->
+            <i class="fa-solid fa-globe icon globe-icon"></i>
+
             <ul id="languageDropdown" class="language-dropdown hidden">
-                <li data-lang="en">English</li>
+              <li data-lang="en">English</li>
             </ul>
-        </div>
-        
+          </div>
         </div>
       </nav>
     </header>
@@ -42,37 +47,28 @@
       <h1>CURRENCY CONVERTER</h1>
       <section>
         <div class="container">
-          <!-- Input for amount -->
           <div id="amount-container">
             <label for="amount">Amount</label>
             <div>
               <input type="number" name="amount" id="amount" />
               <select id="amountCurrency"></select>
-              <i class="fa-solid fa-chevron-down icon chevron-amount"></i> <!-- Added class to target this icon -->
+              <i class="fa-solid fa-chevron-down icon chevron-amount"></i>
             </div>
           </div>
-      
-          <!-- Arrow for conversion direction -->
           <div class="arrow-box">
-            <i class="fa-solid fa-right-left icon"></i> <!-- Swap Button -->
+            <i class="fa-solid fa-right-left icon"></i>
           </div>
-      
-          <!-- Input for converted amount -->
           <div class="box" id="converted-container">
             <label for="converted">Converted to</label>
             <div>
               <input type="number" name="converted" id="converted" readonly />
               <select id="convertedCurrency"></select>
-              <i class="fa-solid fa-chevron-down icon chevron-converted"></i> <!-- Added class to target this icon -->
+              <i class="fa-solid fa-chevron-down icon chevron-converted"></i>
             </div>
           </div>
         </div>
       </section>
-      
-      
-      
-      
-      
+
       <div class="globe">
         <p>Wize is trusted by millions around the globe</p>
       </div>
@@ -192,10 +188,14 @@
           </ul>
           <section id="store-container">
             <div class="store-1">
-              <img src="Images/apple store.png" alt="Apple store" />
+              <a href="https://www.apple.com/store" target="_blank"
+                ><img src="Images/apple store.png" alt="Apple store"
+              /></a>
             </div>
             <div class="store-2">
-              <img src="Images/google playstore.png" alt="google playstore" />
+              <a href="https://play.google.com/store/apps?hl=en" target="_blank"
+                ><img src="Images/google playstore.png" alt="google playstore"
+              /></a>
             </div>
           </section>
         </div>
@@ -216,9 +216,15 @@
       <nav class="vector">
         <p class="f">Follow us</p>
         <div class="vicon">
-          <a href="#"> <i class="fa-brands fa-square-facebook"></i></a>
-          <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"> <i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="https://www.facebook.com/your.username" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fa-brands fa-square-x-twitter"></i
+          ></a>
         </div>
       </nav>
     </footer>
